@@ -28,7 +28,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, decimal}
   const { onStake } = useStake(pid, decimal)
   const { stakedBalance } = useFarmUser(pid)
 
-  const rawEarningsBalance = getBalanceNumber(earnings.times(2), decimal)
+  const rawEarningsBalance = getBalanceNumber(earnings.times(2), decimal) // XXXXXX RIMUOVI IL TIMES(2) SE NN C'é IL BUG DEL DOUBLE HARVEST
   let displayBalance
   
   if (rawEarningsBalance < 1) {
