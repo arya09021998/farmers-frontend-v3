@@ -10,6 +10,10 @@ const Title = styled(Heading).attrs({ as: 'h1', size: 'xl' })`
   margin-bottom: 15px;
 `
 
+const Tag1 = styled.a`
+  display: inline-block !important;
+`
+
 const DepA = styled.a`
   display: inline-block !important;
   margin-left: 370px;
@@ -52,10 +56,12 @@ const Hero = ({tokenMode,dividendsMode}) => {
     <StyledHero>
       <Container>
         <Heading as="h1" size="lg" mb="12px" color="#FFFFFF" >{
-            TranslateString(999, 'Yield Farming starts on Oct 4, 8:00PM UTC*')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
+            TranslateString(999, 'Yield Farming starts on Oct 4, 8:00PM UTC')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
         </Heading>
-        <Text color="#FFFFFF" >{TranslateString(999, '*Start date would be slightly modified to align with AAVE launch on Avalanche (check our docs to see why)')} {/* 'But you can already stake your tokens! (Yield Farming start could be slightly modified due to AAVE launch on AVAX)' */}
+        <Tag1 target="_blank" rel="noreferrer" href="https://app.aave.com/markets">
+        <Text color="#fb2141" >{TranslateString(999, 'Aave just launched on Avalanche! Borrow that $$$ and stake with us to make more!')} {/* 'But you can already stake your tokens! (Yield Farming start could be slightly modified due to AAVE launch on AVAX)' */}
         </Text>
+        </Tag1>
       <Timer />
         {/* <Heading as="h1" size="lg" mb="12px" color="#fb3321" >
           {TranslateString(999, 'Yield Farming started!')}
