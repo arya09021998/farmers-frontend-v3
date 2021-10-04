@@ -29,7 +29,13 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, decimal}
   const { stakedBalance } = useFarmUser(pid)
 
   const rawEarningsBalance = getBalanceNumber(earnings, decimal)
-  const displayBalance = rawEarningsBalance.toLocaleString()
+  let displayBalance
+  
+  if (rawEarningsBalance < 1) {
+	displayBalance = rawEarningsBalance.toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 8 });
+  } else {
+	  	displayBalance = rawEarningsBalance.toLocaleString();
+  }
   
   
   /* const canHarvest = lockup.isEqualTo(0)
