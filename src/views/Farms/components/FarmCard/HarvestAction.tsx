@@ -28,7 +28,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, decimal}
   const { onStake } = useStake(pid, decimal)
   const { stakedBalance } = useFarmUser(pid)
 
-  const rawEarningsBalance = getBalanceNumber(earnings, decimal)
+  const rawEarningsBalance = getBalanceNumber(earnings.times(2), decimal)
   let displayBalance
   
   if (rawEarningsBalance < 1) {
