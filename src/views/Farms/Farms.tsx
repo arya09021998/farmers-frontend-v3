@@ -108,7 +108,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
         }
 
         if(totalValue.comparedTo(0) > 0){
-          apy = apy.div(totalValue.div(4)); // XXXXX APR MODIFIER
+          apy = apy.div(totalValue.div(4)); // XXXXX APR MODIFIER, PORTA A div(2) SE NON C'é IL BUG DEL DOUBLE HARVEST
         }
 
         return { ...farm, apy }
