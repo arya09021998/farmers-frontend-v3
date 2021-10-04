@@ -59,7 +59,7 @@ const Hero = ({tokenMode,dividendsMode}) => {
             TranslateString(999, 'Yield Farming starts on Oct 4, 8:00PM UTC')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
         </Heading>
         <Tag1 target="_blank" rel="noreferrer" href="https://app.aave.com/markets">
-        <Text color="#fb2141" >{TranslateString(999, 'Aave just launched on Avalanche! Borrow assets there and stake them with us to make even more!')} {/* 'But you can already stake your tokens! (Yield Farming start could be slightly modified due to AAVE launch on AVAX)' */}
+        <Text color="#fb2141" >{TranslateString(999, 'Take advantage of the AvalancheRush incentives by borrowing assets on Aave and staking them with us!')} {/* 'But you can already stake your tokens! (Yield Farming start could be slightly modified due to AAVE launch on AVAX)' */}
         </Text>
         </Tag1>
       <Timer />
