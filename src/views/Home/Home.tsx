@@ -31,6 +31,7 @@ const Hero = styled.div`
   flex-direction: column;
   margin: auto;
   margin-bottom: 15px;
+  margin-top: 30px;
   padding-top: 116px;
   text-align: center;
   position: relative;
@@ -109,13 +110,12 @@ const Home: React.FC = () => {
   
     <Page>
          <Heading as="h1" size="lg" mb="12px" color="#FFFFFF" >{
-            TranslateString(999, 'Yield Farming starts on Oct 4, 8:00PM UTC')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
+            TranslateString(999, 'YIELD FARMING HAS STARTED!')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
         </Heading>
         <Tag1 target="_blank" rel="noreferrer" href="https://app.aave.com/markets">
         <Text color="#fb2141" >{TranslateString(999, 'Take advantage of the AvalancheRush incentives by borrowing assets on Aave and staking them with us!')} {/* 'But you can already stake your tokens! (Yield Farming start could be slightly modified due to AAVE launch on AVAX)' */}
         </Text>
         </Tag1>
-          <Timer />
         {/* <Heading as="h1" size="lg" mb="12px" color="#fb3321" >
           {TranslateString(999, 'Yield Farming started!')}
         </Heading>
