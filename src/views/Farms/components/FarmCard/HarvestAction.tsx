@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import BigNumber from 'bignumber.js'
-import { Button, Flex, Heading } from '@pancakeswap-libs/uikit'
+import { Button, Flex, Heading, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import { useHarvest } from 'hooks/useHarvest'
 import { getBalanceNumber } from 'utils/formatBalance'
 import styled from 'styled-components'
 import { useFarmUser } from 'state/hooks'
 import useStake from '../../../../hooks/useStake'
+import { usePriceCakeBusd } from '../../../../state/hooks'
 
 interface FarmCardActionsProps {
   earnings?: BigNumber
@@ -19,6 +20,11 @@ const BalanceAndCompound = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+`
+
+const DollarValue = styled(Text)`
+	font-weight: 600; 
+  }
 `
 
 const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, decimal}) => {
@@ -37,6 +43,8 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, decimal}
 	  	displayBalance = rawEarningsBalance.toLocaleString();
   }
   
+  const cakePrice = usePriceCakeBusd()
+  const dollarValue = (cakePrice.toNumber()*rawEarningsBalance).toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 4 })
   
   /* const canHarvest = lockup.isEqualTo(0)
   const harvestBlank = stakedBalance.isEqualTo(0)
@@ -57,6 +65,7 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, decimal}
   return (
     <Flex mb='8px' justifyContent='space-between' alignItems='center'>
       <Heading color={rawEarningsBalance === 0 ? 'textDisabled' : 'text'}>{displayBalance}</Heading>
+	  
       <BalanceAndCompound>
         {pid === 10 ?  // COMPOUND PID PIDCOMPOUND COMPOUNDPID
           <Button
@@ -73,6 +82,9 @@ const HarvestAction: React.FC<FarmCardActionsProps> = ({ earnings, pid, decimal}
             {TranslateString(999, 'Compound')}
           </Button>
           : null}
+		  <Flex justifyContent="space-between" alignItems="center">
+      <DollarValue color={rawEarningsBalance === 0 ? 'textDisabled' : '#DDDDDD'}>~${dollarValue}</DollarValue>
+    </Flex>
         <Button
           disabled={rawEarningsBalance === 0 || pendingTx} // || !canHarvest
           onClick={async () => {
