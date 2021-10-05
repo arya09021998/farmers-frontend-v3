@@ -144,7 +144,7 @@ const FarmedStakingCard = () => {
         <Block>
           <Label>{TranslateString(544, 'CORN to Harvest')}</Label>
           <CakeHarvestBalance earningsSum={earningsSum*2}/> {/* XXXXXX LEVA IL x2 SE NON C'é IL DOUBLE HARVEST */}
-          <Label>~${(eggPrice * earningsSum).toFixed(2)}</Label>
+          <Label>~${(eggPrice * earningsSum * 2).toFixed(2)}</Label>
         </Block>
         <Block>
           <Label>{TranslateString(546, 'CORN in Wallet')}</Label>
