@@ -93,115 +93,20 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
 
     
   // const totalValueString = Number(totalValueser).toLocaleString(undefined, { maximumFractionDigits: 0 })
+  
+  let totalValueFinal
 
-  if (lpLabel === 'USDC.e-USDT.e LP') { // XXXX
-    
-  return (
-    <Wrapper>
-      <Flex justifyContent="space-between">
-        <Text color="#FFFFFF">{TranslateString(316, 'Stake')}:</Text>
-        <StyledLinkExternal href={
-          externalLink
-        }>
-          {lpLabel}
-        </StyledLinkExternal>
-      </Flex>
-      {!removed && (
-        <Flex justifyContent="space-between">
-          <Text color="#FFFFFF">{TranslateString(23, 'Total Liquidity')}:</Text>
-          <Text color="#FFFFFF">{totalValueUSDCUSDT}</Text>
-        </Flex>
-      )}
-      <Flex justifyContent="flex-start">
-        <Link external href={bscScanAddress} bold={false}>
-          {TranslateString(356, 'View on Avax Explorer')}
-        </Link>
-      </Flex>
-    </Wrapper>
-  )
-} 
-
-  if (lpLabel === 'CORN-WAVAX LP') { // XXXX
-    
-  return (
-    <Wrapper>
-      <Flex justifyContent="space-between">
-        <Text color="#FFFFFF">{TranslateString(316, 'Stake')}:</Text>
-        <StyledLinkExternal href={
-          externalLink
-        }>
-          {lpLabel}
-        </StyledLinkExternal>
-      </Flex>
-      {!removed && (
-        <Flex justifyContent="space-between">
-          <Text color="#FFFFFF">{TranslateString(23, 'Total Liquidity')}:</Text>
-          <Text color="#FFFFFF">{totalValueCORNWAVAX}</Text>
-        </Flex>
-      )}
-      <Flex justifyContent="flex-start">
-        <Link external href={bscScanAddress} bold={false}>
-          {TranslateString(356, 'View on Avax Explorer')}
-        </Link>
-      </Flex>
-    </Wrapper>
-  )
-} 
-
-
-  if (lpLabel === 'USDC.e') { // XXXX
-    
-  return (
-    <Wrapper>
-      <Flex justifyContent="space-between">
-        <Text color="#FFFFFF">{TranslateString(316, 'Stake')}:</Text>
-        <StyledLinkExternal href={
-          externalLink
-        }>
-          {lpLabel}
-        </StyledLinkExternal>
-      </Flex>
-      {!removed && (
-        <Flex justifyContent="space-between">
-          <Text color="#FFFFFF">{TranslateString(23, 'Total Liquidity')}:</Text>
-          <Text color="#FFFFFF">{totalValueUSDC}</Text>
-        </Flex>
-      )}
-      <Flex justifyContent="flex-start">
-        <Link external href={bscScanAddress} bold={false}>
-          {TranslateString(356, 'View on Avax Explorer')}
-        </Link>
-      </Flex>
-    </Wrapper>
-  )
-} 
-
-if (lpLabel === 'WAVAX-WETH.e LP') { // XXXX
-    
-  return (
-    <Wrapper>
-      <Flex justifyContent="space-between">
-        <Text color="#FFFFFF">{TranslateString(316, 'Stake')}:</Text>
-        <StyledLinkExternal href={
-          externalLink
-        }>
-          {lpLabel}
-        </StyledLinkExternal>
-      </Flex>
-      {!removed && (
-        <Flex justifyContent="space-between">
-          <Text color="#FFFFFF">{TranslateString(23, 'Total Liquidity')}:</Text>
-          <Text color="#FFFFFF">{totalValueWAVAXWETH}</Text>
-        </Flex>
-      )}
-      <Flex justifyContent="flex-start">
-        <Link external href={bscScanAddress} bold={false}>
-          {TranslateString(356, 'View on Avax Explorer')}
-        </Link>
-      </Flex>
-    </Wrapper>
-  )
-}
+  if (lpLabel === 'USDC.e-USDT.e LP') { // XXXXXX
+	totalValueFinal = totalValueUSDCUSDT
+	} else if (lpLabel === 'CORN-WAVAX LP') {
+    totalValueFinal = totalValueCORNWAVAX
+	} else if (lpLabel === 'USDC.e') {
+    totalValueFinal = totalValueUSDC
+	} else if (lpLabel === 'WAVAX-WETH.e LP') {
+    totalValueFinal = totalValueWAVAXWETH
+	} else {
+	totalValueFinal = totalValueCorn
+	}
 
   return (
     <Wrapper>
@@ -216,7 +121,7 @@ if (lpLabel === 'WAVAX-WETH.e LP') { // XXXX
       {!removed && (
         <Flex justifyContent="space-between">
           <Text color="#FFFFFF">{TranslateString(23, 'Total Liquidity')}:</Text>
-          <Text color="#FFFFFF">{totalValueCorn}</Text>
+          <Text color="#FFFFFF">{totalValueFinal}</Text>
         </Flex>
       )}
       <Flex justifyContent="flex-start">

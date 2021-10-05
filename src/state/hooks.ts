@@ -69,6 +69,12 @@ export const usePoolFromPid = (sousId): Pool => {
 
 // Prices
 
+export const usePriceWavaxUsdc = (): BigNumber => {
+  const pid = 5; // WAVAX-USDC LP : DEFAULT 7
+  const farm = useFarmFromPid(pid)
+  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
+}
+
 export const usePriceBnbBusd = (): BigNumber => {
   const pid = 7; // WAVAX-USDC LP : DEFAULT 7
   const farm = useFarmFromPid(pid)
@@ -99,6 +105,29 @@ export const usePriceWethUsdc = (): BigNumber => {
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
 }
 
+export const usePriceWavax = (): BigNumber => {
+  const pid = 0; // CORN-USDC LP : DEFAULT 11
+  const farm = useFarmFromPid(pid);
+  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
+}
+
+export const usePriceBtc = (): BigNumber => {
+  const pid = 2; // CORN-USDC LP : DEFAULT 11
+  const farm = useFarmFromPid(pid);
+  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
+}
+
+export const usePricePng = (): BigNumber => {
+  const pid = 3; // CORN-USDC LP : DEFAULT 11
+  const farm = useFarmFromPid(pid);
+  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
+}
+
+export const usePriceCakeWavax = (): BigNumber => {
+  const pid = 12; // CORN-USDC LP : DEFAULT 11
+  const farm = useFarmFromPid(pid);
+  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO;
+}
 
 export const useTotalValue = (): BigNumber => {
   const farms = useFarms();
