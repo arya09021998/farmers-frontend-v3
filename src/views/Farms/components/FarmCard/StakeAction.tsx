@@ -117,7 +117,7 @@ if (rawStakedBalance >= 1) {
     </Flex>
 	
 <Flex justifyContent="space-between" alignItems="center">
-      <DollarValue color={rawStakedBalance === 0 ? 'textDisabled' : '#DDDDDD'}>${dollarValue}</DollarValue>
+      <DollarValue color={rawStakedBalance === 0 ? 'textDisabled' : '#DDDDDD'}>~${dollarValue}</DollarValue>
     </Flex>
 	</>
   )
