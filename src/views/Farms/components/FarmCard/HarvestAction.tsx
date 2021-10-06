@@ -23,7 +23,8 @@ const BalanceAndCompound = styled.div`
 `
 
 const DollarValue = styled(Text)`
-	font-weight: 600; 
+	font-weight: 500; 
+	font-size: 13px;
   }
 `
 

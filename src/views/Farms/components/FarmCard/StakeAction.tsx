@@ -27,7 +27,8 @@ const IconButtonWrapper = styled.div`
 `
 
 const DollarValue = styled(Text)`
-	font-weight: 600; 
+	font-weight: 500; 
+	font-size: 13px;
   }
 `
 
@@ -73,9 +74,11 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({ stakedBalance, tokenBalan
   } else if (pid === 10) {
 	dollarValue = (cakePrice.toNumber()*rawStakedBalance).toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 2 })
   } else if (pid === 11) {
-	dollarValue = "NaN (check vfat.tools)"
+	dollarValue = (cakePrice.toNumber()*(uuPrice.toNumber()**(-1))*rawStakedBalance*110000).toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 2 }) 
+	dollarValue+= " (may not be accurate)"
   } else if (pid === 12) {
-	dollarValue = "NaN (check vfat.tools)"
+	dollarValue = ((cwPrice.toNumber()*rawStakedBalance)/0.024313).toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 2 })
+	dollarValue+= " (may not be accurate)"
   } else {
 	  dollarValue = 1
   }
