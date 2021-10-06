@@ -50,6 +50,10 @@ const config: MenuEntry[] = [
     icon: 'InfoIcon',
     items: [
       {
+        label: 'CoinMarketCap',
+        href: 'https://coinmarketcap.com/it/currencies/farmersonly/',
+      },
+      {
         label: 'Pangolin',
         href: 'https://info.pangolin.exchange/#/pair/0xc6a9dc8569ada7626b77e04445e93227d0790478', // XXXXCORN
       },
@@ -106,6 +110,10 @@ const config: MenuEntry[] = [
       {
         label: 'Paladin Audit',
         href: 'https://paladinsec.co/projects/farmersonly/',
+      },
+      {
+        label: 'CoinMarketCap Listing',
+        href: 'https://coinmarketcap.com/it/currencies/farmersonly/',
       },
       {
         label: 'DappRadar Listing',
