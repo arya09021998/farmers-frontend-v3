@@ -73,9 +73,9 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({ stakedBalance, tokenBalan
   } else if (pid === 10) {
 	dollarValue = (cakePrice.toNumber()*rawStakedBalance).toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 2 })
   } else if (pid === 11) {
-	dollarValue = (cakePrice.toNumber()*rawStakedBalance*71750).toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 2 })
+	dollarValue = "NaN (check vfat.tools)"
   } else if (pid === 12) {
-	dollarValue = ((cwPrice.toNumber()*rawStakedBalance)/0.024313).toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 2 })
+	dollarValue = "NaN (check vfat.tools)"
   } else {
 	  dollarValue = 1
   }
