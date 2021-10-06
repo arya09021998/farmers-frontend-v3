@@ -51,7 +51,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'CoinMarketCap',
-        href: 'https://coinmarketcap.com/it/currencies/farmersonly/',
+        href: 'https://coinmarketcap.com/currencies/farmersonly/',
       },
       {
         label: 'Pangolin',
@@ -113,7 +113,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'CoinMarketCap Listing',
-        href: 'https://coinmarketcap.com/it/currencies/farmersonly/',
+        href: 'https://coinmarketcap.com/currencies/farmersonly/',
       },
       {
         label: 'DappRadar Listing',
