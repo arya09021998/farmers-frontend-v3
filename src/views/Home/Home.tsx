@@ -110,13 +110,12 @@ const Home: React.FC = () => {
   
     <Page>
          <Heading as="h1" size="lg" mb="12px" color="#FFFFFF" >{
-            TranslateString(999, 'YIELD FARMING HAS STARTED!')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
+            TranslateString(999, '750X MULTIPLIER ON NATIVE LP POOLS!')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
         </Heading>
-        <Tag1 target="_blank" rel="noreferrer" href="https://app.aave.com/markets">
-        <Text color="#fb2141" >{TranslateString(999, 'Take advantage of the AvalancheRush incentives by borrowing assets on Aave and staking them with us!')} {/* 'But you can already stake your tokens! (Yield Farming start could be slightly modified due to AAVE launch on AVAX)' */}
-        </Text>
-        </Tag1>
-        {/* <Heading as="h1" size="lg" mb="12px" color="#fb3321" >
+        {/* <Tag1 target="_blank" rel="noreferrer" href="https://app.aave.com/markets"> */}
+        <Text color="#fb2141" >{TranslateString(999, 'Take advantage of this bonus till it lasts!')}</Text>
+        {/* </Tag1>
+        <Heading as="h1" size="lg" mb="12px" color="#fb3321" >
           {TranslateString(999, 'Yield Farming started!')}
         </Heading>
         <Text color="#FFFFFF" >{TranslateString(999, 'On Sep 28, 8:00PM UTC')}
