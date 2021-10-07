@@ -57,7 +57,7 @@ const Hero = ({tokenMode,dividendsMode}) => {
     <StyledHero>
       <Container>
         <Heading as="h1" size="lg" mb="12px" color="#FFFFFF" >{
-            TranslateString(999, '750X MULTIPLIER ON NATIVE LP POOLS!')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
+            TranslateString(999, '700X MULTIPLIER ON NATIVE LP POOLS!')} {/* 'Yield Farming starts on Sep 28, 8:00PM UTC' */}
         </Heading>
         {/* <Tag1 target="_blank" rel="noreferrer" href="https://app.aave.com/markets"> */}
         <Text color="#fb2141" >{TranslateString(999, 'Take advantage of this bonus till it lasts!')}</Text>
